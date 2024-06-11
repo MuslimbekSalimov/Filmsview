@@ -1,13 +1,53 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@layer base {
+    @font-face {
+      font-family: 'Actor';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./fonts/actor-v17-latin-regular.woff2) format('woff2');
+    }
+  }
+
+  @layer base {
+    @font-face {
+      font-family: 'Abhaya Libre';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./fonts/abhaya-libre-v17-latin-regular.woff2) format('woff2');
+    }
+  }
+
+  @layer base {
+    @font-face {
+      font-family: 'Abhaya Libre';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(./fonts/abhaya-libre-v17-latin-700.woff2) format('woff2');
+    }
+  }
+
+  @layer base {
+    @font-face {
+      font-family: 'Rubik';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./fonts/rubik-v28-latin-regular.woff2) format('woff2');
+    }
+  }
+
+  @layer base {
+    @font-face {
+      font-family: 'Alex Brush';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(./fonts/alex-brush-v22-latin-regular.woff2) format('woff2');
+    }
+  }
