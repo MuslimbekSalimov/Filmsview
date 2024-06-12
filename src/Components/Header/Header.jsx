@@ -21,7 +21,7 @@ function Header() {
                     </a>
 
                    <ul className={`lg:flex max-lg:flex-col absolute lg:static left-[20px] items-center max-lg:top-[10%] max-lg:w-[80%] bg-[#FFF] z-50 transition-none duration-700
-                     ${open ? 'top-20':'left-[-100%]'}`}>
+                     ${open ? 'top-15':'left-[-90%]'}`}>
                     <li className="flex items-center  w-[110px] h-[80px] bg-[#FFF] hover:bg-[#EA4737] ease-in duration-300">
                         <a className="font-[Actor] text-center pl-[12px]" href="#Box Office">Box Office</a>
                     </li>
