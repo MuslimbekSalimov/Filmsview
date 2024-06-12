@@ -1,7 +1,7 @@
 import Logo from "../img/Logo.png";
 import Search from "../img/Search.png";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 // import { useRef } from "react";
 
 
@@ -9,10 +9,7 @@ function Header() {
 
     const [open,setOpen] = useState(false)
 
-    // const refs = {
-    //    elUil = document.querySelector(".list");
-        
-    // }
+    const xRef = useRef();
     
 
     return (
@@ -24,7 +21,7 @@ function Header() {
                         <img className="w-[115px] h-[59px]" src={Logo} alt="Logo" />
                     </a>
 
-                   <ul className={`lg:flex list max-lg:flex-col absolute lg:static left-[20px] items-center max-lg:top-[10%] max-lg:w-[80%] max-lg:bg-[#FFF] transition-none duration-400 z-10 ${open ? 'top-20':'left-[-100%]'}`}>
+                   <ul ref={xRef} className={`lg:flex list max-lg:flex-col absolute lg:static left-[20px] items-center max-lg:top-[10%] max-lg:w-[80%] max-lg:bg-[#FFF] transition-none duration-400 z-10 `}>
                     <li className="flex items-center  w-[110px] h-[80px] bg-[#FFF] hover:bg-[#EA4737] ease-in duration-300">
                         <a className="font-[Actor] text-center pl-[12px]" href="#Box Office">Box Office</a>
                     </li>
@@ -81,8 +78,10 @@ function Header() {
                    </div>
 
                    
-                   <div onClick={()=>setOpen(!open)} className="button lg:hidden text-3xl cursor-pointer">
-                   <ion-icon name={open ? 'close' : 'menu'} ></ion-icon>
+                   <div ref={xRef} onClick={()=>setOpen(!open)} className="button lg:hidden text-3xl cursor-pointer">
+                   <ion-icon onClick={() => {
+                    xRef.current.classList.remove("list")
+                   }} name={open ? 'close' : 'menu'} ></ion-icon>
                    </div>
 
                 </div>

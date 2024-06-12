@@ -11,6 +11,9 @@ li,a {
     text-decoration: none;
 }
 
+.list {
+  display: none;
+}
 
 .slide {
   perspective: 100px;
